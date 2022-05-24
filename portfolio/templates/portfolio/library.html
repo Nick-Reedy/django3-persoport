@@ -1,0 +1,26 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<h1>Coming Soon!</h1>
+
+{% for archive in archives %}
+
+<h2>{{ archive.title }}</h2>
+<p>{{ archive.description }}</p>
+<img src = "{{ archive.image.url }}" height=500 width = 500>
+{% if archive.url %}
+<a href="{{ archive.url }}">Link</a>
+{% endif %}
+
+{% endfor %}
+
+{% endblock %}
+
+
+<br>
+<br>
+<br>
+<br>
